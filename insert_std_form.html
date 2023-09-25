@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+        }
+        .form-container {
+            border: 2px solid #ccc; /* เพิ่มเส้นขอบ 2px สีเทา */
+            padding: 20px; /* เพิ่มช่องว่างภายในกรอบ */
+            text-align: center;
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px; /* เพิ่มพื้นที่รอบ input fields */
+        }
+        .form-container input[type="submit"],input[type="reset"]{
+            padding: 8px 16px;
+            margin: 4px;
+            
+        }
+    </style>
+    <script>
+        function resetForm() {
+            document.getElementsByName('id')[0].value = '';
+            document.getElementsByName('en_name')[0].value = '';
+            document.getElementsByName('en_surname')[0].value = '';
+            document.getElementsByName('th_name')[0].value = '';
+            document.getElementsByName('th_surname')[0].value = '';
+            document.getElementsByName('major_code')[0].value = '';
+            document.getElementsByName('email')[0].value = '';
+        }
+    </script>";
+</head>
+<body>
+    <div class="form-container">
+        <form method="post" action="insert_std.php">
+            <h1>Insert New Record</h1>
+            Id<input type="text" name="id"></br>
+            Name<input type="text" name="en_name"></br>
+            Surname<input type="text" name="en_surname"></br>
+            ชื่อ<input type="text" name="th_name"></br>
+            นามสกุล<input type="text" name="th_surname"></br>
+            Major<input type="text" name="major_code"></br>
+            Email<input type="text" name="email"></br>
+            <input type="submit"><input type="reset" onclick="resetForm();">
+        </form>
+    </div>
+</body>
+</html>
